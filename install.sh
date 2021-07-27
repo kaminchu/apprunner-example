@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cat /etc/os-release
 printenv
 which curl
 which wget
