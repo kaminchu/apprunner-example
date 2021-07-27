@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
-set -eu
+set -eux
 
 cat /etc/os-release
 printenv
-which curl
-which wget
-yum -y install git
-apt-get update && apt-get install -y git build-essential libsqlite3-dev rbenv
+yum install -y git gcc openssl-devel readline-devel zlib-devel
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+exec $SHELL -l
+mkdir -p "$(rbenv root)"/plugins
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 CONFIGURE_OPTS='--disable-install-rdoc' rbenv install 3.0.1
 eval "$(rbenv init -)"
