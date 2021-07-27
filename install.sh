@@ -3,16 +3,16 @@ set -eux
 
 cat /etc/os-release
 printenv
-yum install -y git gcc openssl-devel readline-devel zlib-devel
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-exec $SHELL -l
-mkdir -p "$(rbenv root)"/plugins
-git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+# yum install -y git gcc openssl-devel readline-devel zlib-devel
+# git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
+# exec $SHELL -l
+# mkdir -p "$(rbenv root)"/plugins
+# git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 CONFIGURE_OPTS='--disable-install-rdoc' rbenv install 3.0.1
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 gem install rails -v 6.0.3
 bundle install
 yarn install
