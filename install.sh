@@ -11,8 +11,8 @@ printenv
 # mkdir -p "$(rbenv root)"/plugins
 # git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
-CONFIGURE_OPTS='--disable-install-rdoc' rbenv install 3.0.1
-# eval "$(rbenv init -)"
+/usr/local/rbenv/bin/rbenv install 3.0.1
+eval "$(rbenv init -)"
 gem install rails -v 6.0.3
 bundle install
 yarn install
