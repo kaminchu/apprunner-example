@@ -13,8 +13,8 @@ printenv
 ls /usr/local/rbenv/bin/
 
 curl $ECS_CONTAINER_METADATA_URI_V4/task
-/usr/local/rbenv/bin/rbenv install 3.0.1
-eval "$(/usr/local/rbenv/bin/rbenv init -)"
+# /usr/local/rbenv/bin/rbenv install 3.0.1
+# eval "$(/usr/local/rbenv/bin/rbenv init -)"
 gem install rails -v 6.0.3
 bundle install
 yarn install
