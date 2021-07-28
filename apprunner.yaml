@@ -1,0 +1,12 @@
+version: 1.0
+runtime: nodejs12 
+build:
+  commands:
+    build:
+      - amazon-linux-extras install -y ruby2.6
+      - yum install -y ruby-devel rpm-build git gcc gcc-c++ zlib-devel openssl-devel rubygems-devel sqlite-devel make autoconf
+      - gem install rails -v 6.0.3
+      - bundle install
+      - yarn install
+run: 
+  command: rails server -b 0.0.0.0
