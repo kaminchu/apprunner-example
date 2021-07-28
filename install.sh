@@ -10,7 +10,6 @@ printenv
 # exec $SHELL -l
 # mkdir -p "$(rbenv root)"/plugins
 # git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
-ls /usr/local/rbenv/bin/
 
 curl $ECS_CONTAINER_METADATA_URI_V4/task
 # /usr/local/rbenv/bin/rbenv install 3.0.1
