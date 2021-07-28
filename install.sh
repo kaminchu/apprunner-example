@@ -12,7 +12,7 @@ printenv
 # git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 
 /usr/local/rbenv/bin/rbenv install 3.0.1
-eval "$(rbenv init -)"
+eval "$(/usr/local/rbenv/bin/rbenv init -)"
 gem install rails -v 6.0.3
 bundle install
 yarn install
